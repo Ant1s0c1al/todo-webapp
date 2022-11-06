@@ -20,7 +20,9 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     // todos: Todo[] = [] 
     // [hardcoded] data = [TODOS]
-    this.todos = this.todoService.getTodos();
-  }
+    // this.todos = this.todoService.getTodos();
 
+    // Get Back Todo's from Observable | (return value) => ...
+    this.todoService.getTodos().subscribe((todos) => this.todos = todos);
+  }
 }
