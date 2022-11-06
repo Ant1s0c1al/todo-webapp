@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Lorem ipsum dolor sit amet, adipisicing",
+      "important": false
+    },
+    {
+      "id": 1,
+      "text": "Ipsum dolor sit amet, qui minim labore",
+      "important": true
+    },
+    {
+      "id": 1,
+      "text": "Dolor sit amet, qui minim labore adipig",
+      "important": true
+    }
+  ]
+}
