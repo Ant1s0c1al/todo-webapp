@@ -7,6 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BtnComponent } from './components/btn/btn.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TodosComponent } from './components/todos/todos.component';
     NavComponent,
     HeaderComponent,
     BtnComponent,
-    TodosComponent
+    TodosComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

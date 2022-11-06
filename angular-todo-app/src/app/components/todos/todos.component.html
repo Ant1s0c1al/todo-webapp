@@ -1,9 +1,8 @@
 <main>
   <section>
     <div class="container text-center text-white">
-      <h3 class="mt-4" *ngFor="let todo of todos">
-        {{ todo.text }}
-      </h3>
+      <app-todo-item class="mt-4" *ngFor="let todo of todos" [todo]="todo">
+      </app-todo-item>
     </div>
   </section>
 </main>
