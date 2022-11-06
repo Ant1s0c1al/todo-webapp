@@ -1,6 +1,7 @@
 <header>
   <div class="container text-center text-white">
     <h1 class="mt-4">{{ title }}</h1>
-    <app-btn col="btn-primary" txt="Add a Task"></app-btn>
+    <app-btn col="btn-primary" txt="Add a Task" (btnClick)="toggleAddTask()">
+    </app-btn>
   </div>
 </header>
