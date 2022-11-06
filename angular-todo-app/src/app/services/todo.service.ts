@@ -3,9 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 // [Before]: db.json
-import { Observable, of } from 'rxjs';
+// [Removed] {, of} because HttpClient returns Observable
+import { Observable } from 'rxjs';
 import { Todo } from '../Todo';
-import { TODOS } from '../mock-todos';
+// import { TODOS } from '../mock-todos';
 
 @Injectable({
   providedIn: 'root'
