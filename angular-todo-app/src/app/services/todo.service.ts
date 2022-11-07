@@ -33,4 +33,11 @@ export class TodoService {
     // ### [GET] Request ###
     return this.http.get<Todo[]>(this.apiUrl);
   }
+
+  deleteTodo(todo: Todo): Observable<Todo> {
+    // NOTE: delete request requires an id from apiUrl
+    const url = `${this.apiUrl}/${todo.id}`;
+    // ### [DEL] Request ###
+    return this.http.delete<Todo>(url);
+  }
 }
