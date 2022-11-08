@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Lorem ipsum dolor sit amet, adipisicing",
+      "important": false
+    },
+    {
+      "id": 2,
+      "text": "Ipsum dolor sit amet, qui minim labore",
+      "important": false
+    },
+    {
+      "id": 3,
+      "text": "Ipsum dolor sit amet, qui minim labore",
+      "important": true
+    },
+    {
+      "id": 4,
+      "text": "Ipsum dolor sit amet, qui minim labore",
+      "important": true
+    },
+    {
+      "text": "🙏didndbdj djdidj",
+      "important": true,
+      "id": 5
+    }
+  ]
+}

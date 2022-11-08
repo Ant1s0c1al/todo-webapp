@@ -1,0 +1,16 @@
+<!--
+#1 | onDelete(todo)
+#2 | onToggle(todo)
+-->
+<section>
+  <div (dblclick)="onToggle(todo)">
+
+    <div class="card" [ngClass]="{ important: todo.important }">
+      <div class="card-body text-black d-flex justify-content-between">
+        {{ todo.text }}
+        <fa-icon (click)="onDelete(todo)" [ngStyle]="{'color':'red'}" [icon]="faTimes"></fa-icon>
+      </div>
+    </div>
+
+  </div>
+</section>
