@@ -1,9 +1,11 @@
 <div class="mb-3">
   <label for="text" class="form-label text-left">TODO: </label>
-  <input type="text" class="form-control" id="text" placeholder="Start Typing...">
+  <!-- Two-Way [Databinding] -->
+  <input type="text" name="text" [(ngModel)]="text" class="form-control" id="text" placeholder="Start Typing...">
 </div>
 <div class="mb-3 form-check">
-  <input type="checkbox" class="form-check-input" id="important">
+  <input type="checkbox" name="important" [(ngModel)]="important" class="form-check-input" id="important">
   <label class="form-check-label" for="important">Important!</label>
 </div>
+{{ text }}
 <button type="submit" value="Save Todo" class="btn btn-primary mb-4">Save</button>
