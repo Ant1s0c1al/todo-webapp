@@ -3,7 +3,7 @@
     <div class="container text-white mt-3">
 
       <!-- [Embedded] -->
-      <app-new-todo></app-new-todo>
+      <app-new-todo (onNewTodo)="newTodo($event)"></app-new-todo>
 
     </div>
   </section>

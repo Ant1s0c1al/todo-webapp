@@ -54,4 +54,9 @@ export class TodoService {
     // Sending data with headers containing content type (httpOptions)
     return this.http.put<Todo>(url, todo, httpOptions);
   }
+
+  newTodo(todo: Todo): Observable<Todo> {
+    // ### [POST] Request ###
+    return this.http.post<Todo>(this.apiUrl, todo, httpOptions);
+  }
 }

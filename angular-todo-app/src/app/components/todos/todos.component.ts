@@ -42,4 +42,11 @@ export class TodosComponent implements OnInit {
     console.log(todo.important);
     this.todoService.updateTodoImportant(todo).subscribe();
   }
+
+  // Define (onNewTodo)="newTodo($event)"
+  // create newTodo in service.ts
+  newTodo(todo: Todo) {
+    console.log(todo)
+    this.todoService.newTodo(todo).subscribe((todo) => (this.todos.push(todo)));
+  }
 }
