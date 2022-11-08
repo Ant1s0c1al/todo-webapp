@@ -1,9 +1,13 @@
 <main>
   <section>
     <div class="container text-center text-white">
+      <!-- [Embedded] -->
+      <app-new-todo></app-new-todo>
+
       <app-todo-item class="mt-4" *ngFor="let todo of todos" [todo]="todo" (onDeleteTodo)="deleteTodo(todo)"
         (onToggleImportant)="toggleImportant(todo)">
       </app-todo-item>
+
     </div>
   </section>
 </main>

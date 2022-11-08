@@ -12,6 +12,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 // [Free] Icons
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NewTodoComponent } from './components/new-todo/new-todo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     BtnComponent,
     TodosComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    NewTodoComponent
   ],
   imports: [
     BrowserModule,
