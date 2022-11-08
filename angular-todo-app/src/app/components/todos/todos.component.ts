@@ -40,5 +40,6 @@ export class TodosComponent implements OnInit {
     // Take current todo.important set to opposite
     todo.important = !todo.important;
     console.log(todo.important);
+    this.todoService.updateTodoImportant(todo).subscribe();
   }
 }

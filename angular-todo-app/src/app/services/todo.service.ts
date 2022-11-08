@@ -8,6 +8,13 @@ import { Observable } from 'rxjs';
 import { Todo } from '../Todo';
 // import { TODOS } from '../mock-todos';
 
+// [HttpHeaders] NOTE: Can be imbedded within function or globally
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -39,5 +46,12 @@ export class TodoService {
     const url = `${this.apiUrl}/${todo.id}`;
     // ### [DEL] Request ###
     return this.http.delete<Todo>(url);
+  }
+
+  updateTodoImportant(todo: Todo): Observable<Todo> {
+    const url = `${this.apiUrl}/${todo.id}`;
+    // ### [PUT] Request ###
+    // Sending data with headers containing content type (httpOptions)
+    return this.http.put<Todo>(url, todo, httpOptions);
   }
 }
