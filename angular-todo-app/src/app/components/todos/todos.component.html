@@ -1,7 +1,8 @@
 <main>
   <section>
     <div class="container text-center text-white">
-      <app-todo-item class="mt-4" *ngFor="let todo of todos" [todo]="todo" (onDeleteTodo)="deleteTodo(todo)">
+      <app-todo-item class="mt-4" *ngFor="let todo of todos" [todo]="todo" (onDeleteTodo)="deleteTodo(todo)"
+        (onToggleImportant)="toggleImportant(todo)">
       </app-todo-item>
     </div>
   </section>

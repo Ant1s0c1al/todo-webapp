@@ -34,4 +34,11 @@ export class TodosComponent implements OnInit {
     // todoService calls deleteTodo(deletes from server) | then [FILTER]: Out from UI
     this.todoService.deleteTodo(todo).subscribe(() => (this.todos = this.todos.filter(t => t.id !== todo.id)));
   }
+
+  // Define (onToggleImportant)="toggleImportant(todo)"
+  toggleImportant(todo: Todo) {
+    // Take current todo.important set to opposite
+    todo.important = !todo.important;
+    console.log(todo.important);
+  }
 }

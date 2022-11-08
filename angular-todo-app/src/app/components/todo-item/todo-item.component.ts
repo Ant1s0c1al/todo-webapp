@@ -9,8 +9,10 @@ import { Todo } from '../../Todo';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
-  // Add: <app-todo-item (onDeleteTodo)=" "
+  // Add: <app-todo-item... (onDeleteTodo)=" "
   @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();
+  // Add: todos.component.html >>> onToggleImportant
+  @Output() onToggleImportant: EventEmitter<Todo> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
@@ -23,5 +25,10 @@ export class TodoItemComponent implements OnInit {
     // log current todo item
     console.log(todo);
     this.onDeleteTodo.emit(todo);
+  }
+
+  // Define (dblclick)="onToggle(todo)"
+  onToggle(todo: Todo) {
+    this.onToggleImportant.emit(todo);
   }
 }
