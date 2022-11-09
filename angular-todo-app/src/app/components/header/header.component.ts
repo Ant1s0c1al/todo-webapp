@@ -9,10 +9,13 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'Header Component';
-  showNewTodo: boolean;
+  // Add a Task btn-primary • [DEFAULT]
+  showNewTodo: boolean = false;
   subscription: Subscription;
 
-  constructor(private uiService: UiService) { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showNewTodo = value));
+  }
 
   ngOnInit(): void {
   }
