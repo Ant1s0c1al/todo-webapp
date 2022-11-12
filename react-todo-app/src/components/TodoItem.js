@@ -7,7 +7,13 @@ const TodoItem = ({ todoitem }) => {
       <div>
         <Card>
           <Card.Body>
-            <Card.Text className='d-flex justify-content-between'>{todoitem.text}<FaTimes className='text-danger' /></Card.Text>
+
+            <Card.Text
+              className='d-flex justify-content-between'
+            > {todoitem.text}
+              <FaTimes className='text-danger' />
+            </Card.Text>
+
           </Card.Body>
         </Card>
       </div>
