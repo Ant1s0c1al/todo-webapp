@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
+import Todos from './components/Todos';
 //import logo from './logo.svg';
 import './App.scss';
 
@@ -36,7 +37,7 @@ function App() {
 
       {/* Main App */}
       <Container>
-        <main></main>
+        <Todos todos={todos} />
       </Container>
 
     </>
