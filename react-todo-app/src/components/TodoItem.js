@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import { FaTimes } from 'react-icons/fa';
 
-const TodoItem = ({ todoitem }) => {
+const TodoItem = ({ todoitem, onDelete }) => {
   return (
     <>
       <div>
@@ -11,7 +11,7 @@ const TodoItem = ({ todoitem }) => {
             <Card.Text
               className='d-flex justify-content-between'
             > {todoitem.text}
-              <FaTimes className='text-danger' />
+              <FaTimes className='text-danger' onClick={() => onDelete(todoitem.id)} />
             </Card.Text>
 
           </Card.Body>

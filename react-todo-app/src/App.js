@@ -26,6 +26,11 @@ function App() {
   ])
 
   // #Function • Delete
+  const deleteTodo = (id) => {
+    console.log('Delete|# ', id);
+    setTodos(todos.filter((todoitem) => todoitem.id !== id))
+  }
+
   // #Function • Important
   // #Function • Create
 
@@ -37,7 +42,7 @@ function App() {
 
       {/* Main App */}
       <Container>
-        <Todos todos={todos} />
+        <Todos todos={todos} onDelete={deleteTodo} />
       </Container>
 
     </>
