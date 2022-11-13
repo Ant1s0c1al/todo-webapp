@@ -5,7 +5,7 @@ const TodoItem = ({ todoitem, onDelete, onToggle }) => {
   return (
     <>
       <div
-        className={`fw-bold ${todoitem.important ? 'text-warning' : ''} `}
+        className={`fw-bold ${todoitem.important ? 'text-warning' : ''}`}
         onDoubleClick={() => onToggle(todoitem.id)}
       >
 
