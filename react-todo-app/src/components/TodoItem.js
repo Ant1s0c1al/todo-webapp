@@ -11,7 +11,10 @@ const TodoItem = ({ todoitem, onDelete }) => {
             <Card.Text
               className='d-flex justify-content-between'
             > {todoitem.text}
-              <FaTimes className='text-danger' onClick={() => onDelete(todoitem.id)} />
+              <FaTimes
+                className='text-danger'
+                onClick={() => onDelete(todoitem.id)}
+              />
             </Card.Text>
 
           </Card.Body>
