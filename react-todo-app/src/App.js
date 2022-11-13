@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import Todos from './components/Todos';
+import CreateTodo from './components/CreateTodo';
 //import logo from './logo.svg';
 import './App.scss';
 
@@ -44,6 +45,14 @@ function App() {
   }
 
   // #Function • Create
+  const createTodo = (todoitem) => {
+    console.log(todoitem);
+    // Generate Random #[ID]
+    const id = Math.floor(Math.random() * 10000) + 1
+    console.log('Random ID|# ', id)
+    const newTodo = { id, ...todoitem }
+    setTodos([...todos, newTodo])
+  }
 
   return (
     <>
@@ -53,11 +62,15 @@ function App() {
 
       {/* Main App */}
       <Container>
+
         <Todos
           todos={todos}
           onDelete={deleteTodo}
           onToggle={toggleImportant}
         />
+
+        <CreateTodo onCreate={createTodo} />
+
       </Container>
 
     </>
