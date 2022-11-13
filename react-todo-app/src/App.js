@@ -3,11 +3,13 @@ import { Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import Todos from './components/Todos';
 import CreateTodo from './components/CreateTodo';
+import CreateTodoHeader from './components/CreateTodoHeader';
 //import logo from './logo.svg';
 import './App.scss';
 
 function App() {
   // React(Hooks) useState | Returns a stateful value
+  const [showCreateTodo, setShowCreateTodo] = useState(false);
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -69,7 +71,12 @@ function App() {
           onToggle={toggleImportant}
         />
 
-        <CreateTodo onCreate={createTodo} />
+        <CreateTodoHeader
+          showCreate={showCreateTodo}
+          onCreate={() => setShowCreateTodo(!showCreateTodo)}
+        />
+
+        {showCreateTodo && <CreateTodo onCreate={createTodo} />}
 
       </Container>
 

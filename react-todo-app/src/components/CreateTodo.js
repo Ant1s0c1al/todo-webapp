@@ -29,7 +29,7 @@ const CreateTodo = ({ onCreate }) => {
     <>
       <Form onSubmit={onSubmit} >
 
-        <Form.Group className='mb-3'>
+        <Form.Group className='mt-4 mb-3'>
           <Form.Label>
             TODO:
           </Form.Label>
