@@ -1,10 +1,14 @@
 import Card from 'react-bootstrap/Card';
 import { FaTimes } from 'react-icons/fa';
 
-const TodoItem = ({ todoitem, onDelete }) => {
+const TodoItem = ({ todoitem, onDelete, onToggle }) => {
   return (
     <>
-      <div>
+      <div
+        className={`fw-bold ${todoitem.important ? 'text-warning' : ''} `}
+        onDoubleClick={() => onToggle(todoitem.id)}
+      >
+
         <Card>
           <Card.Body>
 
@@ -19,6 +23,7 @@ const TodoItem = ({ todoitem, onDelete }) => {
 
           </Card.Body>
         </Card>
+
       </div>
     </>
   );

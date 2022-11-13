@@ -34,6 +34,11 @@ function App() {
   }
 
   // #Function • Important
+  const toggleImportant = (id) => {
+    console.log('Toggle Important|# ', id);
+    setTodos(todos.map((todoitem) => todoitem.id === id ? { ...todoitem, important: !todoitem.important } : todoitem))
+  }
+
   // #Function • Create
 
   return (
@@ -47,6 +52,7 @@ function App() {
         <Todos
           todos={todos}
           onDelete={deleteTodo}
+          onToggle={toggleImportant}
         />
       </Container>
 
