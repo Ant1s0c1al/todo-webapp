@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Alert } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import Todos from './components/Todos';
 import CreateTodo from './components/CreateTodo';
@@ -65,11 +65,18 @@ function App() {
       {/* Main App */}
       <Container>
 
-        <Todos
-          todos={todos}
-          onDelete={deleteTodo}
-          onToggle={toggleImportant}
-        />
+        {todos.length > 0 ?
+          <Todos
+            todos={todos}
+            onDelete={deleteTodo}
+            onToggle={toggleImportant}
+          /> : <Alert
+            className='mt-3 text-center'
+            key='danger'
+            variant='danger'
+          > No Todo Available!
+          </Alert>
+        }
 
         <CreateTodoHeader
           showCreate={showCreateTodo}

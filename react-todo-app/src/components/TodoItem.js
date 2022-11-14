@@ -1,30 +1,19 @@
-import Card from 'react-bootstrap/Card';
+import { Card, Alert } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
 
 const TodoItem = ({ todoitem, onDelete, onToggle }) => {
   return (
     <>
-      <div
-        className={`fw-bold ${todoitem.important ? 'text-warning' : ''}`}
-        onDoubleClick={() => onToggle(todoitem.id)}
+
+      <Alert className={`my-2 d-flex justify-content-between ${todoitem.important ? 'bg-warning' : ''}`} key='warning' variant='warning' onDoubleClick={() => onToggle(todoitem.id)}
       >
+        {todoitem.text}
+        <FaTimes
+          className='text-danger'
+          onClick={() => onDelete(todoitem.id)}
+        />
+      </Alert>
 
-        <Card>
-          <Card.Body>
-
-            <Card.Text
-              className='d-flex justify-content-between'
-            > {todoitem.text}
-              <FaTimes
-                className='text-danger'
-                onClick={() => onDelete(todoitem.id)}
-              />
-            </Card.Text>
-
-          </Card.Body>
-        </Card>
-
-      </div>
     </>
   );
 }
