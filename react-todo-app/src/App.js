@@ -8,6 +8,7 @@ import CreateTodoHeader from './components/CreateTodoHeader';
 import './App.scss';
 
 function App() {
+
   // React(Hooks) useState | Returns a stateful value
   const [showCreateTodo, setShowCreateTodo] = useState(false);
   const [todos, setTodos] = useState([
