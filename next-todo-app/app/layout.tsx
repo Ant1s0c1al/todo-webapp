@@ -1,4 +1,6 @@
 import './globals.scss';
+import Nav from './nav';
+import Footer from './footer';
 
 export default function RootLayout({
   children,
@@ -13,7 +15,11 @@ export default function RootLayout({
         https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
