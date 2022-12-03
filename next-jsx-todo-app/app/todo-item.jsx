@@ -7,10 +7,18 @@ export default function TodoItem({ todo }) {
   return (
     <>
       <div className={styles.grid}>
-        <a className={`${styles.card}`} href='#'>
-          <h2>#{todo.id}</h2>
-          <p>{todo.text}</p>
-        </a>
+        <div className={`${styles.card}`} href='#'>
+          <div className='d-flex justify-content-between'>
+            <h2>TODO#{todo.id}</h2>
+            <input
+              type='checkbox'
+              className='form-check-input'
+              id='exampleCheck1'
+            />
+          </div>
+          <span className='badge rounded-pill text-bg-primary text-white'>+XP 100</span>
+          <p className='pt-3'>{todo.text}</p>
+        </div>
       </div>
     </>
   );
