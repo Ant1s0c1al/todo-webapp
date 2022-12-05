@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -8,6 +8,12 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
+
+        <Link
+          className='btn btn-outline-primary mt-5'
+          href='/todos'
+        > TODO WEBAPP
+        </Link>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -29,7 +35,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://vercel.com/templates/next.js/app-directory"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.card}

@@ -3,17 +3,17 @@
     {
       "id": 1,
       "text": "Lorem qui minim labore adipisicin",
-      "important": false
+      "complete": false
     },
     {
       "id": 2,
       "text": "Pora qui minirwwm lskodre pisiiwf",
-      "important": true
+      "complete": true
     },
     {
       "id": 3,
       "text": "Boram qumddi miniffm labore adipd",
-      "important": true
+      "complete": true
     }
   ]
 }
