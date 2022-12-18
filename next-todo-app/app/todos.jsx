@@ -3,7 +3,7 @@ import Todo from './todo';
 
 // ### Data Fetching ###
 async function getData() {
-  const res = await fetch('http://localhost:5000/todos');
+  const res = await fetch('http://localhost:5000/todos', { cache: 'no-store' });
   // Recommendation: handle errors
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
